@@ -22,6 +22,7 @@ namespace Scholar_sys
 		private System.Windows.Forms.TextBox txtmat;
 		private System.Windows.Forms.Button btncolor;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label lbldisplay;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -53,6 +54,7 @@ namespace Scholar_sys
 			this.txtmat = new System.Windows.Forms.TextBox();
 			this.btncolor = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.lbldisplay = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -79,7 +81,7 @@ namespace Scholar_sys
 			this.btnaddalum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnaddalum.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnaddalum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(150)))), ((int)(((byte)(25)))));
-			this.btnaddalum.Location = new System.Drawing.Point(541, 230);
+			this.btnaddalum.Location = new System.Drawing.Point(539, 163);
 			this.btnaddalum.MaximumSize = new System.Drawing.Size(125, 40);
 			this.btnaddalum.MinimumSize = new System.Drawing.Size(125, 40);
 			this.btnaddalum.Name = "btnaddalum";
@@ -94,7 +96,7 @@ namespace Scholar_sys
 			// 
 			this.lblmatgru.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblmatgru.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(24)))), ((int)(((byte)(144)))));
-			this.lblmatgru.Location = new System.Drawing.Point(287, 207);
+			this.lblmatgru.Location = new System.Drawing.Point(285, 140);
 			this.lblmatgru.MaximumSize = new System.Drawing.Size(200, 30);
 			this.lblmatgru.MinimumSize = new System.Drawing.Size(200, 30);
 			this.lblmatgru.Name = "lblmatgru";
@@ -108,7 +110,7 @@ namespace Scholar_sys
 			this.lblmat.BackColor = System.Drawing.Color.Transparent;
 			this.lblmat.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblmat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(24)))), ((int)(((byte)(144)))));
-			this.lblmat.Location = new System.Drawing.Point(67, 207);
+			this.lblmat.Location = new System.Drawing.Point(65, 140);
 			this.lblmat.MaximumSize = new System.Drawing.Size(200, 30);
 			this.lblmat.MinimumSize = new System.Drawing.Size(200, 30);
 			this.lblmat.Name = "lblmat";
@@ -121,23 +123,23 @@ namespace Scholar_sys
 			// 
 			this.txtmatgru.BackColor = System.Drawing.Color.White;
 			this.txtmatgru.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtmatgru.Location = new System.Drawing.Point(287, 237);
+			this.txtmatgru.Location = new System.Drawing.Point(285, 170);
 			this.txtmatgru.MaximumSize = new System.Drawing.Size(200, 40);
 			this.txtmatgru.MaxLength = 8;
 			this.txtmatgru.MinimumSize = new System.Drawing.Size(200, 40);
 			this.txtmatgru.Name = "txtmatgru";
-			this.txtmatgru.Size = new System.Drawing.Size(200, 26);
+			this.txtmatgru.Size = new System.Drawing.Size(200, 40);
 			this.txtmatgru.TabIndex = 21;
 			// 
 			// txtmat
 			// 
 			this.txtmat.BackColor = System.Drawing.Color.White;
 			this.txtmat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtmat.Location = new System.Drawing.Point(67, 237);
+			this.txtmat.Location = new System.Drawing.Point(65, 170);
 			this.txtmat.MaximumSize = new System.Drawing.Size(200, 40);
 			this.txtmat.MinimumSize = new System.Drawing.Size(200, 40);
 			this.txtmat.Name = "txtmat";
-			this.txtmat.Size = new System.Drawing.Size(200, 26);
+			this.txtmat.Size = new System.Drawing.Size(200, 40);
 			this.txtmat.TabIndex = 20;
 			// 
 			// btncolor
@@ -167,12 +169,21 @@ namespace Scholar_sys
 			this.pictureBox1.TabIndex = 24;
 			this.pictureBox1.TabStop = false;
 			// 
+			// lbldisplay
+			// 
+			this.lbldisplay.Location = new System.Drawing.Point(47, 230);
+			this.lbldisplay.Name = "lbldisplay";
+			this.lbldisplay.Size = new System.Drawing.Size(595, 253);
+			this.lbldisplay.TabIndex = 27;
+			this.lbldisplay.Text = "-";
+			// 
 			// MateriasForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
 			this.ClientSize = new System.Drawing.Size(678, 544);
+			this.Controls.Add(this.lbldisplay);
 			this.Controls.Add(this.btnlist);
 			this.Controls.Add(this.btnaddalum);
 			this.Controls.Add(this.lblmatgru);

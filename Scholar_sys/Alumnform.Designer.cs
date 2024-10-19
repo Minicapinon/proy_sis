@@ -24,6 +24,7 @@ namespace Scholar_sys
 		private System.Windows.Forms.Button btnlist;
 		private System.Windows.Forms.Button btnmater;
 		private System.Windows.Forms.Button btnlogout;
+		private System.Windows.Forms.Label lbldisplay;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -57,6 +58,7 @@ namespace Scholar_sys
 			this.btnlist = new System.Windows.Forms.Button();
 			this.btnmater = new System.Windows.Forms.Button();
 			this.btnlogout = new System.Windows.Forms.Button();
+			this.lbldisplay = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -80,7 +82,7 @@ namespace Scholar_sys
 			// 
 			this.txtalum.BackColor = System.Drawing.Color.White;
 			this.txtalum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtalum.Location = new System.Drawing.Point(60, 230);
+			this.txtalum.Location = new System.Drawing.Point(70, 141);
 			this.txtalum.MaximumSize = new System.Drawing.Size(200, 40);
 			this.txtalum.MinimumSize = new System.Drawing.Size(200, 40);
 			this.txtalum.Name = "txtalum";
@@ -91,7 +93,7 @@ namespace Scholar_sys
 			// 
 			this.txtmat.BackColor = System.Drawing.Color.White;
 			this.txtmat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.txtmat.Location = new System.Drawing.Point(280, 230);
+			this.txtmat.Location = new System.Drawing.Point(290, 141);
 			this.txtmat.MaximumSize = new System.Drawing.Size(200, 40);
 			this.txtmat.MaxLength = 8;
 			this.txtmat.MinimumSize = new System.Drawing.Size(200, 40);
@@ -104,7 +106,7 @@ namespace Scholar_sys
 			this.lblaluser.BackColor = System.Drawing.Color.Transparent;
 			this.lblaluser.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblaluser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(24)))), ((int)(((byte)(144)))));
-			this.lblaluser.Location = new System.Drawing.Point(60, 200);
+			this.lblaluser.Location = new System.Drawing.Point(70, 111);
 			this.lblaluser.MaximumSize = new System.Drawing.Size(200, 30);
 			this.lblaluser.MinimumSize = new System.Drawing.Size(200, 30);
 			this.lblaluser.Name = "lblaluser";
@@ -117,7 +119,7 @@ namespace Scholar_sys
 			// 
 			this.lblalumat.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblalumat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(24)))), ((int)(((byte)(144)))));
-			this.lblalumat.Location = new System.Drawing.Point(280, 200);
+			this.lblalumat.Location = new System.Drawing.Point(290, 111);
 			this.lblalumat.MaximumSize = new System.Drawing.Size(200, 30);
 			this.lblalumat.MinimumSize = new System.Drawing.Size(200, 30);
 			this.lblalumat.Name = "lblalumat";
@@ -144,7 +146,7 @@ namespace Scholar_sys
 			this.btnaddalum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnaddalum.Font = new System.Drawing.Font("JetBrainsMono NFM SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnaddalum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(150)))), ((int)(((byte)(25)))));
-			this.btnaddalum.Location = new System.Drawing.Point(530, 230);
+			this.btnaddalum.Location = new System.Drawing.Point(540, 141);
 			this.btnaddalum.MaximumSize = new System.Drawing.Size(125, 40);
 			this.btnaddalum.MinimumSize = new System.Drawing.Size(125, 40);
 			this.btnaddalum.Name = "btnaddalum";
@@ -203,12 +205,21 @@ namespace Scholar_sys
 			this.btnlogout.UseVisualStyleBackColor = false;
 			this.btnlogout.Click += new System.EventHandler(this.BtnlogoutClick);
 			// 
+			// lbldisplay
+			// 
+			this.lbldisplay.Location = new System.Drawing.Point(60, 200);
+			this.lbldisplay.Name = "lbldisplay";
+			this.lbldisplay.Size = new System.Drawing.Size(595, 253);
+			this.lbldisplay.TabIndex = 20;
+			this.lbldisplay.Text = "-";
+			// 
 			// Alumnform
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
 			this.ClientSize = new System.Drawing.Size(678, 544);
+			this.Controls.Add(this.lbldisplay);
 			this.Controls.Add(this.btnlogout);
 			this.Controls.Add(this.btnmater);
 			this.Controls.Add(this.btnlist);

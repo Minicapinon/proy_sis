@@ -1,9 +1,12 @@
 ﻿/*
- * Created by CapinonMStudio.
+ * Created by CapinonMStudio
  * User: angel
+ * Date: 17/10/2024
+ * version 5.1 of Sharpdevelop
  */
 using System;
 using System.Drawing;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Scholar_sys
@@ -13,6 +16,8 @@ namespace Scholar_sys
 	/// </summary>
 	public partial class MateriasForm : Form
 	{
+		// Lista para almacenar los alumnos
+        private List<MatCont> mat_er = new List<MatCont>();
 		public MateriasForm()
 		{
 			InitializeComponent();
@@ -40,6 +45,7 @@ namespace Scholar_sys
 				// Para los labels
 				lblmat.ForeColor = System.Drawing.Color.FromArgb(160, 90, 200);
 				lblmatgru.ForeColor = System.Drawing.Color.FromArgb(160, 90, 200);
+				lbldisplay.ForeColor = System.Drawing.Color.FromArgb(160, 90, 200);
 
 				//Para el fondo de los textbox
 				txtmat.BackColor = System.Drawing.Color.FromArgb(24,24,24);
@@ -71,6 +77,7 @@ namespace Scholar_sys
 				// Para los labels
 				lblmat.ForeColor = System.Drawing.Color.FromArgb(115, 24, 144);
 				lblmatgru.ForeColor = System.Drawing.Color.FromArgb(115, 24, 144);
+				lbldisplay.ForeColor = System.Drawing.Color.FromArgb(115, 24, 144);
 
 				//Para el fondo de los textbox
 				txtmat.BackColor = System.Drawing.Color.FromArgb(255,255,255);
@@ -84,7 +91,7 @@ namespace Scholar_sys
 				isblackmode = false;
 			}
 		}
-		int mat_id = 1;
+		int mat_id = 0;
 		void BtnaddalumClick(object sender, EventArgs e)
 		{
 			if(txtmat.Text == "" || txtmatgru.Text == "")
@@ -102,22 +109,22 @@ namespace Scholar_sys
 			{
 				if(mat_id <= 10)
 				{
+					// Incrementa el contador de alumnos
+					mat_id++;
 					MatCont newMat = new MatCont
 					{
 						id = mat_id,
-						matname = txtmatgru.Text,
+						matname = txtmat.Text,
 						matgru = txtmatgru.Text
 					};
-
-					// Incrementa el contador de alumnos
-					mat_id++;
+					mat_er.Add(newMat);
 				}
 				else
 				{
 					// Declara el mensaje a mostrar
-					const string message = "Se alcanzo el limite\n de alumnos (10)";
+					const string message = "Se alcanzo el limite\n de materias (10)";
 					// Asigna el titulo del MessageBox
-					const string title = "Maximo de alumnos";;
+					const string title = "Maximo de maerias";;
 					// Muestra el boton de "Aceptar"		
 					MessageBoxButtons buttons = MessageBoxButtons.OK;
 					// Muestra el MessageBox final
@@ -127,7 +134,18 @@ namespace Scholar_sys
 		}
 		void BtnlistClick(object sender, EventArgs e)
 		{
-			
+			if (mat_er.Count == 0)
+            {
+                lbldisplay.Text = "Ningún alumno ha sido mostrado";
+            }
+            else
+            {
+                lbldisplay.Text = "ID  | Nombre          | Matrícula\n";
+                foreach (var prop in mat_er)
+                {
+                    lbldisplay.Text += prop.id + "  | " + prop.matname + " | " + prop.matgru + "\n";
+                }
+            }
 		}
 
 		// Estructura para almacenar las materias (solo se guardan cuando el ptrograma esta ejecutandose)
